@@ -8,7 +8,7 @@ class NavMenu extends HTMLElement {
     <nav id="nav" class="container">
       <div class="logo-brand">
         <a href="#" class="logo-brand-link">
-          <img src="./images/icons/logo.svg" width="50" alt="logo" />
+          <img src="./images/icons/favicon.png" width="50" alt="logo" />
           <span>Madima</span>
         </a>
       </div>
@@ -20,10 +20,10 @@ class NavMenu extends HTMLElement {
       <div id="drawer" class="nav-menu">
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
+            <a href="#/resto" class="nav-link">Resto</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Favorite</a>
+            <a href="#/favorite" class="nav-link">Your Favorite</a>
           </li>
           <li class="nav-item">
             <a
