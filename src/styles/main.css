@@ -99,7 +99,7 @@ body {
 
 .nav-item a {
   text-decoration: none;
-  color: #fff;
+  color: #3f3f46;
   font-weight: bold;
   padding: 16px;
 }
@@ -292,7 +292,7 @@ main {
   padding: 5px;
   border-radius: 8px;
   font-weight: bold;
-  color: #3e7c17;
+  color: #2d580e;
 }
 
 .rating:focus {
@@ -403,7 +403,7 @@ main {
   padding: 5px;
   border-radius: 8px;
   font-weight: bold;
-  color: #3e7c17;
+  color: #2d580e;
   font-size: 1.2rem;
 }
 
@@ -591,10 +591,10 @@ svg rect {
 
 .btn {
   background-color: rgba(137, 44, 220, 0.1);
-  border: 2px solid #f54748;
+  border: 2px solid #8e0b0b;
   padding: 6px 15px;
   border-radius: 5px;
-  color: #f54748;
+  color: #8e0b0b;
   font-weight: bold;
   transition: 0.3s;
   text-align: center;
