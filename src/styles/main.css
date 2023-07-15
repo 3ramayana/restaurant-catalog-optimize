@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body,
 html {
   margin: 0;
@@ -233,7 +237,7 @@ main {
  */
 
 .main-header {
-  padding-top: 100px;
+  padding-top: 50px;
   margin-bottom: 50px;
   font-size: 1.2rem;
 }
@@ -258,17 +262,21 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 16px;
+  gap: 20px;
 }
 
 .card {
-  width: 18rem;
+  width: 20rem;
   font-size: 0.9rem;
   background-color: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
   border-radius: 0.5rem;
   padding: 8px;
   cursor: pointer;
+}
+
+.card a {
+  padding: 12px;
 }
 
 .card:focus {
@@ -354,6 +362,162 @@ main {
 
 /* 
 *
+* DETAIL 
+*
+ */
+.detail-container {
+  font-size: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.detail-resto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  margin: 20px 0;
+}
+
+.detail-resto-img img {
+  width: 100%;
+  height: calc(282px + 5vw);
+  border-radius: 0.5rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.detail-resto-content {
+  padding: 16px 32px;
+  flex: 4 1 40ch;
+}
+
+.detail-resto-tags {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.resto-rating {
+  background-color: #e8e1d9;
+  padding: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #3e7c17;
+  font-size: 1.2rem;
+}
+
+.resto-rating:focus {
+  outline: 3px solid #bf1722;
+}
+
+.resto-rating img {
+  width: 20px !important;
+  margin-right: 4px;
+}
+
+.resto-tag {
+  display: inline-block;
+  margin: 8px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f54748;
+  padding: 0.1rem 0.7rem;
+  border-radius: 1rem;
+}
+
+.resto-desc {
+  margin: 20px 0;
+}
+
+.resto-desc:focus {
+  outline: 3px solid #bf1722;
+}
+
+.resto-location {
+  color: #3e7c17;
+  font-weight: bold;
+}
+
+.resto-location:focus {
+  outline: 3px solid #bf1722;
+}
+
+.resto-location img {
+  margin-right: 5px;
+}
+
+.resto-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  /* margin: 2rem 0; */
+}
+
+.resto-menu:focus {
+  outline: 3px solid #bf1722;
+}
+
+.food {
+  padding: 1rem;
+}
+
+.food h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.food-item {
+  font-size: 1.2rem;
+  margin: 0 1.5rem;
+}
+
+.food-item p {
+  margin-bottom: 0.5rem;
+}
+
+.food-item span {
+  margin-right: 1rem;
+}
+
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.review-title {
+  font-size: 1.5rem;
+}
+
+.review-item {
+  width: 320px;
+  background-color: #d8dee4;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.review-name {
+  font-weight: bold;
+}
+
+.review-date {
+  font-size: 0.7rem;
+}
+
+.review-desc {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* 
+*
 * FOOTER
 *
  */
@@ -367,8 +531,91 @@ main {
 
 footer {
   background-color: #ffc107;
-  color: #fff;
+  color: #3f3f46;
   font-weight: bold;
   text-align: center;
   padding: 30px;
+}
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 
+  LOADING INDICATOR
+*/
+
+#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+svg path,
+svg rect {
+  fill: #ff6700;
+}
+
+/* 
+  BUTTON
+*/
+
+.btn {
+  background-color: rgba(137, 44, 220, 0.1);
+  border: 2px solid #f54748;
+  padding: 6px 15px;
+  border-radius: 5px;
+  color: #f54748;
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #f54748;
+}
+
+.btn-menu {
+  display: block;
+}
+
+.btn-cta {
+  font-size: 1rem;
+}
+
+.show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
 }
