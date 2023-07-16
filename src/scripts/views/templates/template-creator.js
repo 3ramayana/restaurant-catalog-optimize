@@ -6,9 +6,9 @@ import API_ENDPOINT from '../../globals/api-endpoint';
 const createRestaurantItemTemplate = (restaurant) => `
 <div class="card hvr-underline-from-center" tabindex="0">
   <div class="card-image">
-    <img src="${API_ENDPOINT.IMG_SMALL_RES(restaurant.pictureId)}" alt="${
-  restaurant.name
-}" />
+    <img class="lazyload" data-src="${API_ENDPOINT.IMG_SMALL_RES(
+      restaurant.pictureId
+    )}" alt="${restaurant.name}" />
   </div>
 
   <div class="card-body" tabindex="0">
@@ -20,7 +20,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 
   <div class="card-footer" tabindex="0">
     <span class="place" tabindex="0">
-      <img src="./images/icons/map-marker-alt-solid.svg" width="12" alt="" />
+      <img src="./images/icons/map-marker-alt-solid.svg" alt="" />
       ${restaurant.city}
     </span>
     <span class="rating" tabindex="0">
@@ -37,9 +37,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div class="detail-container" tabindex="0">
       <div class="detail-resto">
         <div class="detail-resto-img">
-          <img src="${API_ENDPOINT.IMG_SMALL_RES(restaurant.pictureId)}" alt="${
-  restaurant.name
-}" />
+          <img class="lazyload" data-src="${API_ENDPOINT.IMG_SMALL_RES(
+            restaurant.pictureId
+          )}" alt="${restaurant.name}" />
         </div>
 
         <div class="detail-resto-content" tabindex="0">
