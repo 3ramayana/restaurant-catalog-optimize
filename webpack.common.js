@@ -93,14 +93,14 @@ module.exports = {
     new BundleAnalyzerPlugin(),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
-      // clientsClaim: true,
-      // skipWaiting: true,
-      // runtimeCaching: [
-      //   {
-      //     urlPattern: new RegExp('https://restaurant-api.dicoding.dev/'),
-      //     handler: 'CacheFirst',
-      //   },
-      // ],
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp('https://restaurant-api.dicoding.dev/'),
+          handler: 'CacheFirst',
+        },
+      ],
     }),
   ],
 };
