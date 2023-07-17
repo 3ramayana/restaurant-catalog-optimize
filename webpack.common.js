@@ -1,3 +1,4 @@
+/* eslint-disable prefer-regex-literals */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -92,6 +93,14 @@ module.exports = {
     new BundleAnalyzerPlugin(),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
+      // clientsClaim: true,
+      // skipWaiting: true,
+      // runtimeCaching: [
+      //   {
+      //     urlPattern: new RegExp('https://restaurant-api.dicoding.dev/'),
+      //     handler: 'CacheFirst',
+      //   },
+      // ],
     }),
   ],
 };
