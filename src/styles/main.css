@@ -194,7 +194,11 @@ body {
 
 @media screen and (max-width: 768px) {
   .hero-container {
+    background: linear-gradient(rgb(5, 71, 71, 0.5), rgba(3, 46, 46, 0.7)),
+      url('../public/images/heros/small/hero-image_2.jpg');
     margin: 6rem 4rem;
+    background-size: cover;
+    background-position: center;
   }
 
   .hero-body h1 {
