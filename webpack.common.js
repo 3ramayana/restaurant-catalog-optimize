@@ -79,6 +79,10 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
+          globOptions: {
+            // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
+            ignore: ['**/images/heros/**'],
+          },
         },
       ],
     }),
@@ -97,8 +101,14 @@ module.exports = {
       skipWaiting: true,
       runtimeCaching: [
         {
-          urlPattern: new RegExp('https://restaurant-api.dicoding.dev/'),
-          handler: 'CacheFirst',
+          urlPattern: new RegExp('^https://restaurant-api.dicoding.dev/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'RestoCatalogue-V1',
+            cacheableResponse: {
+              statuses: [200],
+            },
+          },
         },
       ],
     }),
